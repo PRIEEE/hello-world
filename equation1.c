@@ -9,7 +9,20 @@ int main(void)
     printf("请输入a,b,c:");
 	scanf("%lf%lf%lf",&a,&b,&c);
     d = b * b - 4 * a * c;
-    if(d > 0)
+    if(a==0&&b!=0)//判断分母 
+    {
+     printf("x1=x2= %g\n",(-c/b));}
+     else if(a==0&&b==0)
+        {
+		 if(c=0)
+		   {
+         printf("方程有无穷组解");
+           }
+	     else {
+	    printf("方程无解"); }
+		}
+	else  
+	if(d > 0)
     {
       x1 = (-1 * b + sqrt(d)) / (2 * a);
       x2 = (-1 * b - sqrt(d)) / (2 * a);
@@ -24,5 +37,6 @@ int main(void)
     {
       printf("方程没有实根\n");
     }
+
     return 0;
 }
